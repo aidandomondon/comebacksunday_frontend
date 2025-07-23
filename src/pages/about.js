@@ -1,5 +1,5 @@
 import React from "react";
-import Countdown from "../components/countdown";
+// import Countdown from "../components/countdown";
 // import dynamic from 'next/dynamic';
 
 // // Must load countdown dynamically because it depends on the browser Window object.
