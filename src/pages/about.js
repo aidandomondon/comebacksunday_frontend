@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 // import Countdown from "../components/countdown";
 // import dynamic from 'next/dynamic';
 
@@ -15,7 +15,7 @@
 // }
 
 export default function About() {
-  // const [isAuthenticated, setIsAuthenticated] = React.useState<Boolean>(false);
+  const [isAuthenticated, setIsAuthenticated] = React.useState<Boolean>(false);
 
   return (
     <div>
