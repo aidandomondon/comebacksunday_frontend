@@ -10,7 +10,7 @@ function scrollToPageTwo() {
 export default function About() {
   const [isAuthenticated, setIsAuthenticated] = React.useState<Boolean>(false);
 
-  const content = (
+  return (
     <div>
       <div id="page-one" class="page-full">
           <div id="title-block">
@@ -21,12 +21,10 @@ export default function About() {
           </div>
           <div id="Menu">
             { 
-              isAuthenticated
-                ? <a>FEED</a>
-                : <React.Fragment>
-                  <a><p>LOG IN</p></a>
-                  <a><p>CREATE ACCOUNT</p></a>
-                </React.Fragment>
+              isAuthenticated ? <a>FEED</a> : <React.Fragment>
+                <a><p>LOG IN</p></a>
+                <a><p>CREATE ACCOUNT</p></a>
+              </React.Fragment>
             }
             <p onClick={scrollToPageTwo}>ABOUT</p>
           </div>
@@ -78,6 +76,5 @@ export default function About() {
           </div>
       </div>
     </div>
-  )
-  return content;
+  );
 }
