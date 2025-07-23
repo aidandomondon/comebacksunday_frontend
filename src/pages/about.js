@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 // import Countdown from "../components/countdown";
 // import dynamic from 'next/dynamic';
 
@@ -15,7 +15,7 @@ import React from "react";
 // }
 
 export default function About() {
-  const [isAuthenticated, setIsAuthenticated] = React.useState<Boolean>(false);
+  // const [isAuthenticated, setIsAuthenticated] = React.useState<Boolean>(false);
 
   return (
     <div>
@@ -28,10 +28,10 @@ export default function About() {
           </div>
           <div id="Menu">
             { 
-              isAuthenticated ? <a>FEED</a> : <React.Fragment>
-                <a><p>LOG IN</p></a>
-                <a><p>CREATE ACCOUNT</p></a>
-              </React.Fragment>
+              // isAuthenticated ? <a>FEED</a> : <React.Fragment>
+              //   <a><p>LOG IN</p></a>
+              //   <a><p>CREATE ACCOUNT</p></a>
+              // </React.Fragment>
             }
             <p>ABOUT</p>
           </div>
