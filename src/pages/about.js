@@ -18,10 +18,10 @@ export default function About() {
                 <div id="Menu">
                   { 
                     isAuthenticated
-                      ? <a href="{% url 'posts:feed' %}">FEED</a>
+                      ? <a>FEED</a>
                       : <React.Fragment>
-                        <a href="{% url 'registration:login' %}"><p>LOG IN</p></a>
-                        <a href="{% url 'posts:create_user' %}"><p>CREATE ACCOUNT</p></a>
+                        <a><p>LOG IN</p></a>
+                        <a><p>CREATE ACCOUNT</p></a>
                       </React.Fragment>
                   }
                   <p onclick="scrollToPageTwo()">ABOUT</p>
@@ -69,7 +69,7 @@ export default function About() {
                         <p>
                             One day a week, that's all we give ourselves.
                         </p>
-                        <a id="get-started" href="{% url 'posts:create_user' %}"><p>Get Started</p></a>
+                        <a id="get-started"><p>Get Started</p></a>
                     </div>
                 </div>
             </div>
