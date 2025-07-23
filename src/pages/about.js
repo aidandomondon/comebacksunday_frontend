@@ -1,11 +1,18 @@
 import React from "react";
 import Countdown from "../components/countdown";
+import dynamic from 'next/dynamic';
 
-// Scrolls page 2 into view
-function scrollToPageTwo() {
-    const pageTwo = document.getElementById('page-two');
-    pageTwo.scrollIntoView({behavior: "smooth"});
-}
+// Must load countdown dynamically because it depends on the browser Window object.
+const DynamicCountdownWithNoSSR = dynamic(
+  () => import('../components/countdown'),
+  { ssr: false }
+)
+
+// // Scrolls page 2 into view
+// function scrollToPageTwo() {
+//     const pageTwo = document.getElementById('page-two');
+//     pageTwo.scrollIntoView({behavior: "smooth"});
+// }
 
 export default function About() {
   const [isAuthenticated, setIsAuthenticated] = React.useState<Boolean>(false);
@@ -17,7 +24,7 @@ export default function About() {
               <div id="title">
                   <h1>COME BACK SUNDAY</h1>
               </div>
-              <Countdown/>
+              <DynamicCountdownWithNoSSR/>
           </div>
           <div id="Menu">
             { 
@@ -26,7 +33,7 @@ export default function About() {
                 <a><p>CREATE ACCOUNT</p></a>
               </React.Fragment>
             }
-            <p onClick={scrollToPageTwo}>ABOUT</p>
+            <p>ABOUT</p>
           </div>
       </div>
       <div id="page-two" class="page-full">
