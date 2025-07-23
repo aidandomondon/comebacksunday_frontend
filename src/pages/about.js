@@ -1,12 +1,12 @@
 import React from "react";
 import Countdown from "../components/countdown";
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 
-// Must load countdown dynamically because it depends on the browser Window object.
-const DynamicCountdownWithNoSSR = dynamic(
-  () => import('../components/countdown'),
-  { ssr: false }
-)
+// // Must load countdown dynamically because it depends on the browser Window object.
+// const DynamicCountdownWithNoSSR = dynamic(
+//   () => import('../components/countdown'),
+//   { ssr: false }
+// )
 
 // // Scrolls page 2 into view
 // function scrollToPageTwo() {
@@ -24,7 +24,7 @@ export default function About() {
               <div id="title">
                   <h1>COME BACK SUNDAY</h1>
               </div>
-              <DynamicCountdownWithNoSSR/>
+              {/* <DynamicCountdownWithNoSSR/> */}
           </div>
           <div id="Menu">
             { 
