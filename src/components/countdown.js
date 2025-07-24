@@ -1,4 +1,5 @@
 import { ReactElement, useEffect, useState } from "react";
+import styles from '../pages/countdown.module.css';
 
 // Returns a Date object whose days, hours, minutes, etc. represent
 // the days, hours, minutes, etc. until it next turns Sunday in UTC+14.
@@ -22,11 +23,11 @@ function calculateCountdown() {
     const countdownAsDate = new Date(kiribatiStartOfSunday - kiribatiNow);
     // subtract 1 day because Date objects measure time from January 1st not January 0th.
     countdownAsDate.setUTCDate(countdownAsDate.getUTCDate() - 1);   
-    countdownAsJSON = {
-        "days": date.getUTCDate(),
-        "hours": date.getUTCHours(),
-        "minutes": date.getUTCMinutes(),
-        "seconds": date.getUTCSeconds()
+    const countdownAsJSON = {
+        "days": countdownAsDate.getUTCDate(),
+        "hours": countdownAsDate.getUTCHours(),
+        "minutes": countdownAsDate.getUTCMinutes(),
+        "seconds": countdownAsDate.getUTCSeconds()
     };
     return countdownAsJSON;
 }
@@ -35,26 +36,26 @@ export default function Countdown() {
     const [countdown, setCountdown] = useState(calculateCountdown());
 
     useEffect(() => {
-        setInterval(setCountdown(calculateCountdown), 1000)
-    });
+        setInterval(() => setCountdown(calculateCountdown()), 1000)
+    }, []); // empty dependencies to ensure that setInterval is only called once
 
     return (
-        <div>
-            <div class="countdown-box">
-                <p id="days">{countdown.days}</p>
-                <p>Days</p>
+        <div className={styles.countdown}>
+            <div className={styles.countdownBox}>
+                <p id="days" className={styles.countdownText}>{countdown.days}</p>
+                <p className={styles.countdownText}>Days</p>
             </div>
-            <div class="countdown-box">
-                <p id="hours">{countdown.hours}</p>
-                <p>Hours</p>
+            <div className={styles.countdownBox}>
+                <p id="hours" className={styles.countdownText}>{countdown.hours}</p>
+                <p className={styles.countdownText}>Hours</p>
             </div>
-            <div class="countdown-box">
-                <p id="minutes">{countdown.minutes}</p>
-                <p>Minutes</p>
+            <div className={styles.countdownBox}>
+                <p id="minutes" className={styles.countdownText}>{countdown.minutes}</p>
+                <p className={styles.countdownText}>Minutes</p>
             </div>
-            <div class="countdown-box">
-                <p id="seconds">{countdown.seconds}</p>
-                <p>Seconds</p>
+            <div className={styles.countdownBox}>
+                <p id="seconds" className={styles.countdownText}>{countdown.seconds}</p>
+                <p className={styles.countdownText}>Seconds</p>
             </div>
         </div>
     );

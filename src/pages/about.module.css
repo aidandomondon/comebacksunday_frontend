@@ -1,0 +1,74 @@
+.base {
+    font-family: sans-serif;
+    background-color: rgb(245, 245, 245);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+    align-items: center;
+    overflow: scroll;
+}
+
+.pageFull {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageOne {
+    top: 0;
+}
+
+.titleBlock {
+    position: absolute;
+}
+
+.menu {
+    position: absolute;
+    top: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuItem {
+    margin: 0.25em;
+    color: black;
+    text-decoration-line: none;
+    cursor: grab;
+}
+
+.menuItem:hover {
+    text-decoration-line: underline;
+}
+
+.pageTwo {
+    background-color: black;
+    color: rgb(245, 245, 245);
+    top: 100vh;
+}
+
+.about {
+    width: 50%;
+}
+
+.aboutBody {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.aboutBodyText {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.getStarted {
+    align-self: center;
+    color: white;
+}
