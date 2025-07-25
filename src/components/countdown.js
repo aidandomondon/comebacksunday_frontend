@@ -1,4 +1,4 @@
-import { ReactElement, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from '../pages/countdown.module.css';
 
 // Returns a Date object whose days, hours, minutes, etc. represent
