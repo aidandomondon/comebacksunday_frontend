@@ -1,0 +1,12 @@
+html,
+body,
+#__next {
+    font-family: sans-serif;
+    background-color: rgb(245, 245, 245);
+    width: 100vw;
+    min-height: 650px;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100vh;
+    min-width: 700px;
+}

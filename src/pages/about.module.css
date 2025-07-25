@@ -1,19 +1,8 @@
-.base {
-    font-family: sans-serif;
-    background-color: rgb(245, 245, 245);
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: first baseline;
-    align-items: center;
-    overflow: scroll;
-}
-
 .pageFull {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
+    width: 100%;
+    height: 100%;
     left: 0;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,23 +10,24 @@
 }
 
 .pageOne {
-    top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .titleBlock {
-    position: absolute;
+    grid-row: 2;
+    place-self: center;
 }
 
 .menu {
-    position: absolute;
-    top: 70vh;
+    grid-row: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .menuItem {
-    margin: 0.25em;
     color: black;
     text-decoration-line: none;
     cursor: grab;
@@ -50,7 +40,6 @@
 .pageTwo {
     background-color: black;
     color: rgb(245, 245, 245);
-    top: 100vh;
 }
 
 .about {

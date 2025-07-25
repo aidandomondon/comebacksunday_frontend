@@ -18,8 +18,7 @@ export default function About() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     return (
-        <div className={styles.base}>
-            <div className={styles.pageFull}>
+            <>
                 <div className={[styles.pageFull, styles.pageOne].join(' ')}>
                     <div className={styles.titleBlock}>
                         <div id="title">
@@ -83,7 +82,6 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </>
     );
 }
