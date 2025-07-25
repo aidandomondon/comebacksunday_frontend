@@ -20,11 +20,10 @@ function calculateCountdown() {
     kiribatiStartOfSunday.setUTCMilliseconds(0);
 
     // (3) Countdown = start of sunday in kiribati - current time in kiribati
-    const countdownAsDate = new Date(kiribatiStartOfSunday - kiribatiNow);
-    // subtract 1 day because Date objects measure time from January 1st not January 0th.
-    countdownAsDate.setUTCDate(countdownAsDate.getUTCDate() - 1);   
+    const countdownAsDate = new Date(kiribatiStartOfSunday - kiribatiNow); 
     const countdownAsJSON = {
-        "days": countdownAsDate.getUTCDate(),
+        // subtract 1 day because Date objects measure time from January 1st not January 0th.
+        "days": countdownAsDate.getUTCDate() - 1,
         "hours": countdownAsDate.getUTCHours(),
         "minutes": countdownAsDate.getUTCMinutes(),
         "seconds": countdownAsDate.getUTCSeconds()
