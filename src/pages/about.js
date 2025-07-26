@@ -1,6 +1,7 @@
 import { useState, Fragment } from "react";
 import dynamic from 'next/dynamic';
 import styles from './about.module.css';
+import Link from 'next/link';
 
 // Must load countdown dynamically because it depends on the browser Window object.
 const DynamicCountdownWithNoSSR = dynamic(
@@ -29,8 +30,8 @@ export default function About() {
                     <div className={styles.menu}>
                         {
                             isAuthenticated ? <a className={styles.menuItem}><p>FEED</p></a> : <Fragment>
-                                <a className={styles.menuItem}><p>LOG IN</p></a>
-                                <a className={styles.menuItem}><p>CREATE ACCOUNT</p></a>
+                                <Link className={styles.menuItem} href={'/login'}><p>LOG IN</p></Link>
+                                <Link className={styles.menuItem} href={'/register'}><p>CREATE ACCOUNT</p></Link>
                             </Fragment>
                         }
                         <a className={styles.menuItem}><p onClick={e => scrollToPageTwo()}>ABOUT</p></a>
@@ -78,7 +79,7 @@ export default function About() {
                             <p className={styles.aboutBodyText}>
                                 One day a week, that's all we give ourselves.
                             </p>
-                            <a className={styles.getStarted}><p>Get Started</p></a>
+                            <Link className={styles.getStarted} href={'/register'}><p>Get Started</p></Link>
                         </div>
                     </div>
                 </div>
