@@ -1,0 +1,59 @@
+.base {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageTitle {
+    width: 30%;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 30%;
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    gap: 0.15em;
+}
+
+.formInput {
+    color: black;
+    background-color: lightgray;
+    outline: none;
+    border-radius: 25px;
+    padding: 0.25em 0.5em;
+    box-shadow: none;
+    border: 0;
+    width: 100%;
+}
+
+.formInput:focus,
+.formInput:active {
+    color: lightgray;
+    background-color: black;
+}
+
+.formInput:hover:not(:focus, :active) {
+    background-color: lightslategray;
+}
+
+.formButton {
+    width: fit-content;
+}
+
+.formButtonText {
+    margin: 0.25em;
+}
